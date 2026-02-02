@@ -1,0 +1,74 @@
+{
+  "expected_features": [
+    "age",
+    "gender",
+    "current_country",
+    "highest_education",
+    "field_of_study",
+    "years_of_experience",
+    "english_proficiency",
+    "academic_score",
+    "current_salary_usd",
+    "available_funds_usd",
+    "loan_eligibility",
+    "family_support",
+    "risk_tolerance",
+    "target_role",
+    "career_switch",
+    "priority_income",
+    "priority_pr",
+    "priority_stability",
+    "uk_psw_available",
+    "uk_skill_shortage"
+  ],
+  "categorical_features": [
+    "gender",
+    "current_country",
+    "highest_education",
+    "field_of_study",
+    "risk_tolerance",
+    "target_role"
+  ],
+  "numeric_features": [
+    "age",
+    "years_of_experience",
+    "english_proficiency",
+    "academic_score",
+    "current_salary_usd",
+    "available_funds_usd",
+    "loan_eligibility",
+    "family_support",
+    "career_switch",
+    "priority_income",
+    "priority_pr",
+    "priority_stability",
+    "uk_psw_available",
+    "uk_skill_shortage"
+  ],
+  "label_map": {
+    "0": "Stay Local & Work",
+    "1": "Stay Local & Study",
+    "2": "Go Abroad & Work",
+    "3": "Go Abroad & Study"
+  },
+  "notes": {
+    "goal": "predictive MVP using mostly user-profile features, not benchmark data",
+    "abroad_label": "uk_outcome_score >= median (50.4500)",
+    "study_label": "proxy: degree duration >= 1.5 or tuition >= 5000 (removed from X)",
+    "dropped_prefixes": [
+      "uk_*",
+      "local_*"
+    ],
+    "whitelist_kept": [
+      "uk_psw_available",
+      "uk_skill_shortage"
+    ],
+    "yes_no_mapped_columns": [
+      "loan_eligibility",
+      "family_support",
+      "career_switch",
+      "uk_psw_available",
+      "uk_skill_shortage"
+    ]
+  }
+}
